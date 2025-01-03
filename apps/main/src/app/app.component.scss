@@ -1,0 +1,45 @@
+:host {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+}
+
+header {
+    flex-basis: 300px;
+    padding: 32px;
+    border-right: 1px solid #d7d7dd;
+}
+
+.content {
+    flex: 1;
+    padding: 32px;
+}
+
+
+
+
+.account {
+    flex-basis: 320px;
+    padding: 0 32px 32px;
+    background-color: #fff;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 64px auto;
+
+    .avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background-color: #d7d7dd;
+    }
+    
+    .name {
+        margin: 0;
+        text-align: center;
+    }
+}

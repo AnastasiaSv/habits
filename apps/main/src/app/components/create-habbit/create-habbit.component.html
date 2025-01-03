@@ -1,0 +1,30 @@
+<!-- <mat-form-field appearance="fill">
+    <mat-label>Выберите категорию</mat-label>
+    <mat-select>
+        <mat-option value="option1">Здоровье</mat-option>
+        <mat-option value="option2">Семья</mat-option>
+        <mat-option value="option3">Отношения</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<br>
+
+<mat-form-field appearance="fill">
+    <mat-label>Выберите привычку из списка</mat-label>
+    <mat-select>
+        <mat-option value="option1">Выпивать стакан воды в день</mat-option>
+        <mat-option value="option2">Тренироваться</mat-option>
+        <mat-option value="option3">Есть салат</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<span> Или </span> -->
+
+<mat-form-field>
+    <mat-label>Введите свое название</mat-label>
+    <input #input matInput placeholder="Привычка" value="">
+</mat-form-field>
+
+<br>
+<button type="button" color="primary" (click)="onCreate(input.value)">Добавить</button>
+<button type="button" color="primary" (click)="onCancel()">Отменить</button>

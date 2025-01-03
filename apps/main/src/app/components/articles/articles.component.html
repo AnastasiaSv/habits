@@ -1,0 +1,10 @@
+<ng-container *ngIf="(articles$ | async)?.length; else emptyState">
+    <ng-container *ngFor="let article of (articles$ | async)">
+        <h3 routerLink="/article/{{ article.id }}">{{ article.title }}</h3>
+        <p [innerHTML]="article.text | fooTruncate: 120"></p>
+    </ng-container>
+</ng-container>
+
+<ng-template #emptyState>
+    Not found
+</ng-template>

@@ -1,0 +1,18 @@
+<ng-container *ngIf="habbitBlock.habbits.length">
+    <h4>Привычки</h4>
+    <ul>
+        <li *ngFor="let habbit of habbitBlock.habbits">{{ habbit }}</li>
+    </ul>
+</ng-container>
+
+<ng-container *ngIf="habbitBlock.days.length">
+    <h4>Дни</h4>
+    <div>{{ getActiveDayTitles() }}</div>
+</ng-container>
+
+<ng-container *ngIf="habbitBlock.reward">
+    <h4>Награда за выполнение</h4>
+    <p>{{ habbitBlock.reward }}</p>
+</ng-container>
+
+<button mat-flat-button color="primary" (click)="editHabbit()">Редактировать</button>

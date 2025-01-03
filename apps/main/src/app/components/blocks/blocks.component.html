@@ -1,0 +1,17 @@
+<mat-accordion multi>
+    <mat-expansion-panel *ngFor="let habbitBlock of (habbitBlocks$ | async)">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{ habbitBlock.title }}
+            </mat-panel-title>
+            <mat-panel-description>
+                <button type="button" class="deleteButton" (click)="deleteHabbitBlock(habbitBlock.id)">Удалить</button>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <block [habbitBlock]="habbitBlock"></block>
+    </mat-expansion-panel>
+</mat-accordion>
+
+<br>
+<button mat-flat-button color="primary" (click)="createHabbit()">Добавить блок</button>
